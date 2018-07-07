@@ -47,6 +47,15 @@ arrowDownRight.addEventListener('click', (e) => {
 
 
 
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu');
+const content = document.querySelector('.content');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('menu_active');
+  content.classList.toggle('content_active');
+  
+});
 
 
 
