@@ -1,0 +1,355 @@
+.days button {
+	background: #fff;
+	color: #232323e8;
+	outline: none;
+	display: block;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0 auto;
+	width: auto;
+	border: 1px solid #23232366;
+	border-radius: 5px;
+	padding: 5px 20px;
+	cursor: pointer;
+}
+
+.days button:hover {
+	color: #4caf50;
+	border-color: #4caf50;
+}
+
+
+.mon_icon img {
+	width: 80px;
+	height: 80px;
+}
+
+.save {
+	margin-left: 500px;
+}
+
+
+.days {
+	display: grid;
+	grid-template-columns: repeat(7, 13%);
+	justify-content: center;
+	margin: 130px 0 65px 30px ;
+}
+
+.days>div {
+	width: 70%;
+	cursor: pointer;
+	overflow: hidden;
+}
+.days>div img {
+	width: 100%;
+	transition: 0.6s ease;
+}
+.days img:hover {
+	transform: scale(1.8);
+}
+.days h2 {
+	text-transform: uppercase;
+	position: absolute;
+	top: 135px;
+	left: 43%;
+}
+
+.day {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	border-radius: 15px;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, .19);
+	margin-bottom: 20px;
+}
+
+
+.work {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	padding: 70px 0 40px 0 ;
+	background: linear-gradient(to right, transparent, #fff);
+	transition: background 0.6s ease;
+	border-bottom: 1px solid #DDE0E3;
+}
+
+.add_work_btn {
+	width: 150px;
+	background: transparent;
+	color: #888;
+	font-weight: 400;
+	margin: 24px 0 24px 83%;
+	padding: 5px;
+	
+	outline: none;
+	
+	font-size: 14px;
+	text-transform: uppercase;
+	border: 1px solid #23232366;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.6s ease;
+}
+
+.add_work_btn:hover {
+	color:#222;
+	background: #ACB3B9;
+}
+.add_work_btn:after {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f0fe';
+	margin-left: 8px;
+	font-size: 15px;
+}
+
+.day .mon_icon {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.day.mon .mon_icon {
+	background: url(../img/days/mon.svg) no-repeat;
+	background-size: 180%;
+	background-position: center;
+}
+.day.tu .mon_icon {
+	background: url(../img/days/tu.svg) no-repeat;
+	background-size: 180%;
+	background-position: center;
+}
+.day.wed .mon_icon {
+	background: url(../img/days/wed.svg) no-repeat;
+	background-size: 180%;
+	background-position: center;
+}
+.day.th .mon_icon {
+	background: url(../img/days/th.svg) no-repeat;
+	background-size: 180%;
+	background-position: center;
+}
+.day.fri .mon_icon {
+	background: url(../img/days/fri.svg) no-repeat;
+	background-size: 180%;
+	background-position: center;
+
+}
+.day.sat .mon_icon {
+	background: url(../img/days/sat.svg) no-repeat;
+	background-size: 180%;
+	background-position: center;
+
+}
+.day.sun .mon_icon {
+	background: url(../img/days/sun.svg) no-repeat;
+	background-size: 180%;
+	background-position: center;
+}
+.day .time {
+	position: relative;
+}
+.day .close, .schedule_comfirm .close {
+	position: absolute;
+	top: 27px;
+	right: 2%;
+	cursor: pointer;
+	transition: 0.6s ease;
+	color: #CDD1D5;
+}
+.day .close:hover {
+	color: #FEA7A2;
+}
+.day .close:after, .schedule_comfirm .close:after {
+	content: '\f057';
+	font-family: 'Font Awesome 5 Free';
+	font-size: 30px;
+	color: #4a4a4ad4;
+}
+
+.save button {
+	margin: 0 auto;
+}
+
+.work_time_btns {
+	position: absolute;
+	top: 21px;
+	left: 69%;
+}
+.work_time_btns button {
+	cursor: pointer;
+	position: relative;
+	width: 110px;
+	height: 30px;
+	margin: 0;
+	border: 1px solid #61616169;
+  border-radius: 5px;
+  background: #fff;
+	transition: 0.6s ease;
+	font-size: 12px;
+	box-sizing: border-box;
+	display: inline;
+	outline:none;
+}
+
+.work_time_btns button.day {
+	justify-self: end;
+	background: #fff;
+	color: #232323e8;
+	/*z-index: 10;*/
+	border: 1px solid #23232366;
+}
+
+.work_time_btns button.night {
+	/*z-index: 20;*/
+	border: 1px solid #ACB3B9;
+	background: #ACB3B9;
+	color: #fff;
+}
+
+.work_time_btns button.day i {
+	padding-right: 10px;
+	color: #F2C55C;
+}
+
+.work_time_btns button.night:before {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f186';
+}
+
+.work_time_btns input,
+.work_time_btns input:checked{
+	opacity: 0;
+}
+
+.time_from, .time_to {
+	padding: 10px;
+}
+.time_from h3, 
+.time_to h3 {
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #333333c9;
+}
+.time_from {
+	justify-self: end;
+}
+.time_to {
+	justify-self: start;
+}
+.time_from input, 
+.time_to input{
+	height: 25px;
+	font-size: 14px;
+	color: #232323ba;
+	text-align: center;
+	border: 1px solid #808080;
+	border-radius: 5px;
+}
+
+.wickedpicker {
+	height: 160px!important;
+	z-index: 70;
+}
+.wickedpicker__controls__control-up:before {
+	font-family: 'Font Awesome 5 Free'!important;
+  content: '\f151'!important;
+  font-size: 1.5em;
+}
+.wickedpicker__controls__control-down:after {
+	font-family: 'Font Awesome 5 Free'!important;
+    content: '\f150'!important;
+    font-size: 1.5em;
+}
+.wickedpicker__close:before {
+    content: '\00d7';
+    font-size: 1.5em;
+}
+
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(73,88,103, 0.8);;
+	z-index: 38;
+}
+.schedule_comfirm {
+	display: none;
+	position: fixed;
+	z-index: 40;
+	background: #fff;
+	top: 4%;
+	width: 60%;
+	left: 50%;
+	margin-left: -30%;
+	padding: 4%;
+	overflow: auto;
+}
+.btns {
+	display: grid;
+	grid-template-columns: 20% 20%;
+	grid-gap: 20px;
+	justify-content: center;
+}
+.btns button {
+	margin: 0 auto;
+	
+}
+
+
+.day_name {
+	margin-right: 10px;
+	width: 40%;
+}
+.schedule_day {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #DDE0E3;
+	margin-bottom: 20px;
+}
+
+.day.mon .mon_icon {
+	background: url(./img/mon.png) no-repeat;
+	background-size: 70%;
+	background-position: center;
+}
+.day.tu .mon_icon {
+	background: url(./img/tue.png) no-repeat;
+	background-size: 70%;
+	background-position: center;
+}
+.day.wed .mon_icon {
+	background: url(./img/wed.png) no-repeat;
+	background-size: 70%;
+	background-position: center;
+}
+.day.th .mon_icon {
+	background: url(./img/thr.png) no-repeat;
+	background-size: 70%;
+	background-position: center;
+}
+.day.fri .mon_icon {
+	background: url(./img/fri.png) no-repeat;
+	background-size: 70%;
+	background-position: center;
+
+}
+.day.sat .mon_icon {
+	background: url(./img/sat.png) no-repeat;
+	background-size: 70%;
+	background-position: center;
+
+}
+.day.sun .mon_icon {
+	background: url(./img/sun.png) no-repeat;
+	background-size: 70%;
+	background-position: center;
+}
+

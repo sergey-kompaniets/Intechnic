@@ -15,7 +15,9 @@
 	
 	
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="wickedpicker.css">
+	<link rel="stylesheet" type="text/css" href="picked.css">
 </head>
 <body>
 
@@ -56,17 +58,6 @@
 			  	<button type="button" class="btn-item health">Health</button>
 			  	<button type="button" id="schedule" style="color: #4caf50 !important" class="btn-item locations" active>Schedule</button>
 			  </div>
-			  <!-- <div class="ui vertical pointing menu">
-				  <a class="active item">
-				    <i class="home icon"></i> Home
-				  </a>
-				  <a class="item">
-				    <i class="mail icon"></i> Messages
-				  </a>
-				  <a class="item">
-				    <i class="user icon"></i> Friends
-				  </a>
-				</div> -->
 			  <div class="avatar-container">
 			  	<span>
 					  Katrine
@@ -75,411 +66,51 @@
 					    <img class="ui avatar image" src="https://instagram.fiev10-1.fna.fbcdn.net/vp/1efc2a8c2e37ada6be7c3fe67098d30d/5BDE48AE/t51.2885-19/s150x150/35616614_1784428721626455_6978843186189828096_n.jpg?efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV9pZyJ9">
 					    
 					    <i class="dropdown icon"></i>
-					    <div class="menu">
-					      <div class="item">
-					        <img class="ui avatar image" src="https://instagram.fiev12-1.fna.fbcdn.net/vp/93fd35724b7c14f928bea62035be21af/5BE285E4/t51.2885-15/sh0.08/e35/s640x640/24175416_384073395382476_8875539196945629184_n.jpg?efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV9pZyJ9">
-
-					        Jenny Hess
-					      </div>
-					      <div class="item">
-					        <img class="ui avatar image" src="https://instagram.fiev12-1.fna.fbcdn.net/vp/93fd35724b7c14f928bea62035be21af/5BE285E4/t51.2885-15/sh0.08/e35/s640x640/24175416_384073395382476_8875539196945629184_n.jpg?efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV9pZyJ9">
-
-					        Elliot Fu
-					      </div>
-					      <div class="item">
-					        <img class="ui avatar image" src="https://instagram.fiev12-1.fna.fbcdn.net/vp/93fd35724b7c14f928bea62035be21af/5BE285E4/t51.2885-15/sh0.08/e35/s640x640/24175416_384073395382476_8875539196945629184_n.jpg?efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV9pZyJ9">
-
-					        Stevie Feliciano
-					      </div>
-					      <div class="item">
-					        <img class="ui avatar image" src="https://instagram.fiev12-1.fna.fbcdn.net/vp/93fd35724b7c14f928bea62035be21af/5BE285E4/t51.2885-15/sh0.08/e35/s640x640/24175416_384073395382476_8875539196945629184_n.jpg?efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV9pZyJ9">
-
-					        Christian
-					      </div>
-					      <div class="item">
-					        <img class="ui avatar image" src="https://instagram.fiev12-1.fna.fbcdn.net/vp/93fd35724b7c14f928bea62035be21af/5BE285E4/t51.2885-15/sh0.08/e35/s640x640/24175416_384073395382476_8875539196945629184_n.jpg?efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV9pZyJ9">
-
-					        Matt
-					      </div>
-					      <div class="item">
-					        <img class="ui avatar image" src="https://instagram.fiev12-1.fna.fbcdn.net/vp/93fd35724b7c14f928bea62035be21af/5BE285E4/t51.2885-15/sh0.08/e35/s640x640/24175416_384073395382476_8875539196945629184_n.jpg?efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV9pZyJ9">
-
-					        Justen Kitsune
-					      </div>
-					    </div>
 					  </div>
 					</span>
 			  </div>
 			</header>
-			<main>
-				<input id="toggle-1" class="switch" type="checkbox">
-				<div class="switch-day-night">
+			<div class="days">
+				<h2>Select day work</h2>
+				<div><a href="#day_mon"><button id="mon">Mon</button></a></div>
+				<div><a href="#day_tu"><button id="tu">Tue</button></a></div>
+				<div><a href="#day_wed"><button id="wed">Wed</button></a></div>
+				<div><a href="#day_th"><button id="th">Thu</button></a></div>
+				<div><a href="#day_fri"><button id="fri">Fri</button></a></div>
+				<div><a href="#day_sat"><button id="sat">Sat</button></a></div>
+				<div><a href="#day_sun"><button id="sun">Sun</button></a></div>
+			</div>
+			<div class="schedule_select" id="schedule_select">
 
-					<div class="top">
-						<h1>Monday</h1>
-						<div class="sun-moon">
-							<i class="sun material-icons md-48">brightness_5</i>
-							<i class="moon material-icons md-48">brightness_2</i>
-						</div>
-					</div>
-					<div class="bottom">
-						<span>Day-Night</span>
-						<div class="label-container">
-							<label class="label" for="toggle-1">&nbsp;</label>
-						</div>
-						<span class="work">Work time</span>
-						<div class="time-row">
-							<div class="input-time-container">
-					      <div class="time-arrow-up-left time-arrow-up">
-					      	<i class="material-icons">
-									expand_less
-									</i>
-					      </div>
-					      <input id="hour-from" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-left time-arrow-down">
-									<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					    <span>-</span>
-					    <div class="input-time-container">
-					      <div class="time-arrow-up-right time-arrow-up">
-					      	<i class="material-icons">
-										expand_less
-									</i>
-								</div>
-					      <input id="hour-to" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-right time-arrow-down">
-					      	<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="btn">
-					  	<button type="button" class="clean md-btn md-btn-raised md-btn-ripple">Clean</button>
-					  	<button type="button" class="accept md-btn md-btn-raised md-btn-ripple">Accept</button>
-					  </div>
-					  
-				  </div>
+				<div class="day mon" id="day_mon"></div>
+				<div class="day tu" id="day_tu"></div>
+				<div class="day wed" id="day_wed"></div>
+				<div class="day th" id="day_th"></div>
+				<div class="day fri" id="day_fri"></div>
+				<div class="day sat" id="day_sat"></div>
+				<div class="day sun" id="day_sun"></div>
+				
+			
+			</div>
+			<button type="button" id="save_btn" class="save accept md-btn md-btn-raised md-btn-ripple">Save</button>
+			
+			
+			<div class="overlay"></div>
+			<div class="schedule_comfirm">
+				<div class="close"></div>
+				<h2>Your Schedule</h2>
+				<div class="day_result mon"></div>
+				<div class="day_result tu"></div>
+				<div class="day_result wed"></div>
+				<div class="day_result th"></div>
+				<div class="day_result fri"></div>
+				<div class="day_result sat"></div>
+				<div class="day_result sun"></div>
+				<div class="btns">
+					<button type="button" id="confirm_schedule_btn" class="save accept md-btn md-btn-raised md-btn-ripple">Accept</button>
+					<button type="button" id="change_schedule_btn" class="save accept md-btn md-btn-raised md-btn-ripple">Change</button>
 				</div>
-
-				<input id="toggle-2" class="switch" type="checkbox">
-				<div class="switch-day-night">
-
-					<div class="top">
-						<h1>Tuesday</h1>
-						<div class="sun-moon">
-							<i class="sun material-icons md-48">brightness_5</i>
-							<i class="moon material-icons md-48">brightness_2</i>
-						</div>
-					</div>
-					<div class="bottom">
-						<span>Day-Night</span>
-						<div class="label-container">
-							<label class="label" for="toggle-2">&nbsp;</label>
-						</div>
-						<span class="work">Work time</span>
-						<div class="time-row">
-							<div class="input-time-container">
-					      <div class="time-arrow-up-left time-arrow-up">
-					      	<i class="material-icons">
-									expand_less
-									</i>
-					      </div>
-					      <input id="hour-from" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-left time-arrow-down">
-									<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					    <span>-</span>
-					    <div class="input-time-container">
-					      <div class="time-arrow-up-right time-arrow-up">
-					      	<i class="material-icons">
-										expand_less
-									</i>
-								</div>
-					      <input id="hour-to" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-right time-arrow-down">
-					      	<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="btn">
-					  	<button type="button" class="clean md-btn md-btn-raised md-btn-ripple">Clean</button>
-					  	<button type="button" class="accept md-btn md-btn-raised md-btn-ripple">Accept</button>
-					  </div>
-					  
-				  </div>
-				</div>
-
-				<input id="toggle-3" class="switch" type="checkbox">
-				<div class="switch-day-night">
-
-					<div class="top">
-						<h1>Wednsday</h1>
-						<div class="sun-moon">
-							<i class="sun material-icons md-48">brightness_5</i>
-							<i class="moon material-icons md-48">brightness_2</i>
-						</div>
-					</div>
-					<div class="bottom">
-						<span>Day-Night</span>
-						<div class="label-container">
-							<label class="label" for="toggle-3">&nbsp;</label>
-						</div>
-						<span class="work">Work time</span>
-						<div class="time-row">
-							<div class="input-time-container">
-					      <div class="time-arrow-up-left time-arrow-up">
-					      	<i class="material-icons">
-									expand_less
-									</i>
-					      </div>
-					      <input id="hour-from" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-left time-arrow-down">
-									<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					    <span>-</span>
-					    <div class="input-time-container">
-					      <div class="time-arrow-up-right time-arrow-up">
-					      	<i class="material-icons">
-										expand_less
-									</i>
-								</div>
-					      <input id="hour-to" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-right time-arrow-down">
-					      	<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="btn">
-					  	<button type="button" class="clean md-btn md-btn-raised md-btn-ripple">Clean</button>
-					  	<button type="button" class="accept md-btn md-btn-raised md-btn-ripple">Accept</button>
-					  </div>
-					  
-				  </div>
-				</div>
-
-				<input id="toggle-4" class="switch" type="checkbox">
-				<div class="switch-day-night">
-
-					<div class="top">
-						<h1>Thursday</h1>
-						<div class="sun-moon">
-							<i class="sun material-icons md-48">brightness_5</i>
-							<i class="moon material-icons md-48">brightness_2</i>
-						</div>
-					</div>
-					<div class="bottom">
-						<span>Day-Night</span>
-						<div class="label-container">
-							<label class="label" for="toggle-4">&nbsp;</label>
-						</div>
-						<span class="work">Work time</span>
-						<div class="time-row">
-							<div class="input-time-container">
-					      <div class="time-arrow-up-left time-arrow-up">
-					      	<i class="material-icons">
-									expand_less
-									</i>
-					      </div>
-					      <input id="hour-from" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-left time-arrow-down">
-									<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					    <span>-</span>
-					    <div class="input-time-container">
-					      <div class="time-arrow-up-right time-arrow-up">
-					      	<i class="material-icons">
-										expand_less
-									</i>
-								</div>
-					      <input id="hour-to" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-right time-arrow-down">
-					      	<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="btn">
-					  	<button type="button" class="clean md-btn md-btn-raised md-btn-ripple">Clean</button>
-					  	<button type="button" class="accept md-btn md-btn-raised md-btn-ripple">Accept</button>
-					  </div>
-					  
-				  </div>
-				</div>
-
-				<input id="toggle-5" class="switch" type="checkbox">
-				<div class="switch-day-night">
-
-					<div class="top">
-						<h1>Friday</h1>
-						<div class="sun-moon">
-							<i class="sun material-icons md-48">brightness_5</i>
-							<i class="moon material-icons md-48">brightness_2</i>
-						</div>
-					</div>
-					<div class="bottom">
-						<span>Day-Night</span>
-						<div class="label-container">
-							<label class="label" for="toggle-5">&nbsp;</label>
-						</div>
-						<span class="work">Work time</span>
-						<div class="time-row">
-							<div class="input-time-container">
-					      <div class="time-arrow-up-left time-arrow-up">
-					      	<i class="material-icons">
-									expand_less
-									</i>
-					      </div>
-					      <input id="hour-from" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-left time-arrow-down">
-									<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					    <span>-</span>
-					    <div class="input-time-container">
-					      <div class="time-arrow-up-right time-arrow-up">
-					      	<i class="material-icons">
-										expand_less
-									</i>
-								</div>
-					      <input id="hour-to" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down-right time-arrow-down">
-					      	<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="btn">
-					  	<button type="button" class="clean md-btn md-btn-raised md-btn-ripple">Clean</button>
-					  	<button type="button" class="accept md-btn md-btn-raised md-btn-ripple">Accept</button>
-					  </div>
-					  
-				  </div>
-				</div>
-
-				<input id="toggle-6" class="switch" type="checkbox">
-				<div class="switch-day-night">
-
-					<div class="top">
-						<h1>Saturday</h1>
-						<div class="sun-moon">
-							<i class="sun material-icons md-48">brightness_5</i>
-							<i class="moon material-icons md-48">brightness_2</i>
-						</div>
-					</div>
-					<div class="bottom">
-						<span>Day-Night</span>
-						<div class="label-container">
-							<label class="label" for="toggle-6">&nbsp;</label>
-						</div>
-						<span class="work">Work time</span>
-						<div class="time-row">
-							<div class="input-time-container">
-					      <div class="time-arrow-up">
-					      	<i class="material-icons">
-									expand_less
-									</i>
-					      </div>
-					      <input id="hour" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down">
-									<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					    <span>-</span>
-					    <div class="input-time-container">
-					      <div class="time-arrow-up">
-					      	<i class="material-icons">
-										expand_less
-									</i>
-								</div>
-					      <input id="hour" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down">
-					      	<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="btn">
-					  	<button type="button" class="clean md-btn md-btn-raised md-btn-ripple">Clean</button>
-					  	<button type="button" class="accept md-btn md-btn-raised md-btn-ripple">Accept</button>
-					  </div>
-				  </div>
-				</div>
-				<input id="toggle-7" class="switch" type="checkbox">
-				<div class="switch-day-night">
-
-					<div class="top">
-						<h1>Sunday</h1>
-						<div class="sun-moon">
-							<i class="sun material-icons md-48">brightness_5</i>
-							<i class="moon material-icons md-48">brightness_2</i>
-						</div>
-					</div>
-					<div class="bottom">
-						<span>Day-Night</span>
-						<div class="label-container">
-							<label class="label" for="toggle-7">&nbsp;</label>
-						</div>
-						<span class="work">Work time</span>
-						<div class="time-row">
-							<div class="input-time-container">
-					      <div class="time-arrow-up">
-					      	<i class="material-icons">
-									expand_less
-									</i>
-					      </div>
-					      <input id="hour" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down">
-									<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					    <span>-</span>
-					    <div class="input-time-container">
-					      <div class="time-arrow-up">
-					      	<i class="material-icons">
-										expand_less
-									</i>
-								</div>
-					      <input id="hour" class="input-text input-time" onkeypress="validator()"  maxlength="2" placeholder="HH" type="text" disabled>
-					      <div class="time-arrow-down">
-					      	<i class="material-icons">
-									expand_more
-									</i>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="btn">
-					  	<button type="button" class="clean md-btn md-btn-raised md-btn-ripple">Clean</button>
-					  	<button type="button" class="accept md-btn md-btn-raised md-btn-ripple">Accept</button>
-					  </div>
-				  </div>
-				</div>
-			</main>
+			</div>
 			<footer>
 				<span class="icon icon-logo-footer">
 					<svg xmlns="http://www.w3.org/2000" viewBox="0 0 85.8 12.7">
@@ -518,6 +149,10 @@
 		
 	  
 	</div>
+	<!-- <script type="text/javascript" src="js/wickedpicker.js"></script>
+	<script src="js/js.js"></script> -->
 	<script src="some.js"></script>
+	<script src="wickedpicker.js"></script>
+	<script src="picked.js"></script>
 </body>
 </html>

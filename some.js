@@ -53,8 +53,6 @@ const content = document.querySelector('.content');
 
 menuBtn.addEventListener('click', () => {
   menu.classList.toggle('menu_active');
-  content.classList.toggle('content_active');
-  
 });
 
 
